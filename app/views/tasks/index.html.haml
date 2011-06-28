@@ -1,0 +1,23 @@
+#tasks_app
+  = render 'form'
+
+  %h1 Listing tasks
+
+  %table#tasks
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %br
+
+  = link_to 'New Task', new_task_path
+
+%script{id: 'task_template', type: 'x-handlebars-template'}
+  %td {{name}}
+  %td= link_to 'Delete', '#', class: 'delete'
+  %td
+  %td
+
+
